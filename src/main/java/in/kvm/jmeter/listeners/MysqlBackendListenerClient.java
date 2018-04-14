@@ -1,7 +1,9 @@
 /**
  * 
  */
-package com.amdocs.aqe.km;
+package in.kvm.jmeter.listeners;
+
+import in.kvm.jmeter.listeners.AbstractMysqlMetricsSender;
 
 import java.text.DecimalFormat;
 import java.util.Collection;
@@ -23,7 +25,7 @@ import org.apache.jmeter.visualizers.backend.BackendListenerContext;
 import org.apache.jmeter.visualizers.backend.SamplerMetric;
 import org.apache.jmeter.visualizers.backend.UserMetric;
 
-import com.amdocs.aqe.km.AbstractMysqlMetricsSender;
+
 
 
 
@@ -375,17 +377,17 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
     @Override
     public Arguments getDefaultParameters() {
         Arguments arguments = new Arguments();
-        arguments.addArgument("MYSQLMetricsSender", "com.amdocs.aqe.km.GenericMysqlMetricsSender");
+        arguments.addArgument("MYSQLMetricsSender", "in.kvm.jmeter.listeners.GenericMysqlMetricsSender");
         arguments.addArgument("MYSQLServer", "127.0.0.1");
         arguments.addArgument("MYSQLPort", "3306");
-        arguments.addArgument("MYSQLDatabaseName", "");
-        arguments.addArgument("application", "application name");
+        arguments.addArgument("MYSQLDatabaseName", "jmeterdb");
+        arguments.addArgument("application", "jmeterApplication");
         arguments.addArgument("measurement", "jmeter");
         arguments.addArgument("summaryOnly", "false");
         arguments.addArgument("samplersRegex", ".*");
         arguments.addArgument("percentiles", "99;95;90");
         arguments.addArgument("testTitle", "Test name");
-        arguments.addArgument("eventTags", "");
+        arguments.addArgument("eventTags", "events");
         return arguments;
     }
     

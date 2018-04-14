@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.amdocs.aqe.km;
+package in.kvm.jmeter.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,7 +89,7 @@ class GenericMysqlMetricsSender extends AbstractMysqlMetricsSender {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amdocs.aqe.km.MysqlMetricsSender#addMetric(long, java.lang.String, java.lang.String, java.lang.String)
+	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#addMetric(long, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
     public void addMetric(String mesurement, String tag, String field) {
@@ -99,7 +99,7 @@ class GenericMysqlMetricsSender extends AbstractMysqlMetricsSender {
     }
 
 	/* (non-Javadoc)
-	 * @see com.amdocs.aqe.km.MysqlMetricsSender#setup(java.lang.String, int, java.lang.String)
+	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#setup(java.lang.String, int, java.lang.String)
 	 */
 	@Override
 	public void setup(String mysqlHost, String mysqlPort, String mysqlSchema) {
@@ -155,7 +155,7 @@ class GenericMysqlMetricsSender extends AbstractMysqlMetricsSender {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amdocs.aqe.km.MysqlMetricsSender#writeAndSendMetrics()
+	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#writeAndSendMetrics()
 	 */
 	@Override
 	public void writeAndSendMetrics() {
@@ -218,7 +218,7 @@ class GenericMysqlMetricsSender extends AbstractMysqlMetricsSender {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.amdocs.aqe.km.MysqlMetricsSender#destroy()
+	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#destroy()
 	 */
 	@Override
 	public void destroy() {
