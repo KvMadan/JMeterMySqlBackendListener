@@ -38,5 +38,3 @@ Set the below Backend Listener properties from the JMeter UI
 | **testTitle** | Name of the Test to be stored in DB | "Test name" |
 | **eventTags** | Name of the event Tags | "" | 
 
-
-
