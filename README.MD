@@ -27,14 +27,14 @@ Set the below Backend Listener properties from the JMeter UI
 | Argument | Description | Default Value |
 | -------- | ----------- | ------------- |
 | **MYSQLMetricsSender** | Class that will send statistics | Standard MySQL sender class |
-| **MYSQLServer** | MySql Server to which the metrics to be sent | localhost
+| **MYSQLServer** | MySql Server to which the metrics to be sent | 127.0.0.1 |
 | **MYSQLPort** | MySql Server port | 3306 | 
-| **MYSQLDatabaseName** | MySql Database name | jmeter | 
-| **application** | Application Name | application name | 
+| **MYSQLDatabaseName** | MySql Database name | jmeterdb | 
+| **application** | Application Name | jmeterApplication | 
 | **measurement** | Defautl table for the measurements | jmeter |
 | **summaryOnly** | Send summary details only to the DB | false |
 | **samplersRegex** | regular expression for samplers filtering | .* |
 | **percentiles** | Percentile values to be sent to DB | 99;95;90 | 
-| **testTitle** | Name of the Test to be stored in DB | "Test name" |
-| **eventTags** | Name of the event Tags | "" | 
+| **testTitle** | Name of the Test to be stored in DB | Test name |
+| **eventTags** | Name of the event Tags | events | 
 
