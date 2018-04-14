@@ -1,4 +1,4 @@
-# Overview 
+# JMeter MySQL Backend Listener Overview 
 
 ### Description 
 JMeter MySQL Backend Listener is a JMeter plugin enabling you to send the test results to a MySQL database. It is meant as an alternative live monitoring tool to the build-in "InfluxDB" backend listener of JMeter. 
