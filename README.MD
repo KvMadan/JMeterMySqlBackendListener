@@ -23,6 +23,7 @@ JMeter MySQL Backend Listener is a JMeter plugin enabling you to send the test r
 
 #### Arguments 
 Set the below Backend Listener properties from the JMeter UI
+
 Argument | Description | Default Value
 -------- | ----------- | -------------
 
