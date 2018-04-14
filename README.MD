@@ -36,5 +36,5 @@ Set the below Backend Listener properties from the JMeter UI
 | **samplersRegex** | regular expression for samplers filtering | .* |
 | **percentiles** | Percentile values to be sent to DB | 99;95;90 | 
 | **testTitle** | Name of the Test to be stored in DB | Test name |
-| **eventTags** | Name of the event Tags | events | 
+| **eventTags** | Name of the event Tags |  | 
 
