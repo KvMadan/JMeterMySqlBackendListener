@@ -11,7 +11,7 @@ JMeter MySQL Backend Listener is a JMeter plugin enabling you to send the test r
 ### Download & Install 
 1. Download Jar file from the release page
 2. Copy the file to $JMETER_HOME/lib/ext folder 
-3. Download [mysql-connector-java] (https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.6) and copy it to $JMETER_HOME/lib/ext
+3. Download [mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.6) and copy it to $JMETER_HOME/lib/ext
 4. Restart JMeter if already running
 
 ### Usage
