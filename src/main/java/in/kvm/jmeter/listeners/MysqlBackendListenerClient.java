@@ -89,6 +89,8 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
 	private String MysqlServer;
 	private String MysqlPort; 
 	private String MysqlDatabaseName;
+	private String MysqlUserName;
+	private String MysqlPassword;
 	private String application = "";
 	private String measurement ="DEAFAULT_MEASUREMENT";
 	private boolean summaryOnly;
@@ -309,6 +311,8 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
     	MysqlServer = context.getParameter("MYSQLServer");
     	MysqlPort = context.getParameter("MYSQLPort"); 
     	MysqlDatabaseName = context.getParameter("MYSQLDatabaseName");
+    	MysqlUserName = context.getParameter("MYSQLUsername");
+    	MysqlPassword = context.getParameter("MYSQLPassword");
         
         summaryOnly = context.getBooleanParameter("summaryOnly", false);
         samplersRegex = context.getParameter("samplersRegex", "");
@@ -341,7 +345,7 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
         }
         Class<?> clazz = Class.forName(MysqlMetricsSender);
         this.mysqlMetricsManager = (GenericMysqlMetricsSender) clazz.newInstance();
-        mysqlMetricsManager.setup(MysqlServer, MysqlPort, MysqlDatabaseName);
+        mysqlMetricsManager.setup(MysqlServer, MysqlPort, MysqlDatabaseName, MysqlUserName, MysqlPassword);
         samplersToFilter = Pattern.compile(samplersRegex);
 
         // Adds start of test.
@@ -380,6 +384,8 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
         arguments.addArgument("MYSQLMetricsSender", "in.kvm.jmeter.listeners.GenericMysqlMetricsSender");
         arguments.addArgument("MYSQLServer", "127.0.0.1");
         arguments.addArgument("MYSQLPort", "3306");
+        arguments.addArgument("MYSQLUsername","");
+        arguments.addArgument("MYSQLPassword", "");
         arguments.addArgument("MYSQLDatabaseName", "jmeterdb");
         arguments.addArgument("application", "jmeterApplication");
         arguments.addArgument("measurement", "jmeter");
@@ -387,7 +393,7 @@ public class MysqlBackendListenerClient extends AbstractBackendListenerClient
         arguments.addArgument("samplersRegex", ".*");
         arguments.addArgument("percentiles", "99;95;90");
         arguments.addArgument("testTitle", "Test name");
-        arguments.addArgument("eventTags", "events");
+        //arguments.addArgument("eventTags", "");
         return arguments;
     }
     

@@ -99,15 +99,16 @@ class GenericMysqlMetricsSender extends AbstractMysqlMetricsSender {
     }
 
 	/* (non-Javadoc)
-	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#setup(java.lang.String, int, java.lang.String)
+	 * @see in.kvm.jmeter.listeners.MysqlMetricsSender#setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
-	public void setup(String mysqlHost, String mysqlPort, String mysqlSchema) {
+	public void setup(String mysqlHost, String mysqlPort, String mysqlSchema, String userName, String password) {
 		boolean schemaExists = false;
 
 		try {
 			Class.forName(JDBC_DRIVER);
-			connection = DriverManager.getConnection(String.format(DB_URL, mysqlHost, mysqlPort),"root", "root");
+
+			connection = DriverManager.getConnection(String.format(DB_URL, mysqlHost, mysqlPort), userName, password);
 			
 			ResultSet resultSet = connection.getMetaData().getCatalogs();
 			

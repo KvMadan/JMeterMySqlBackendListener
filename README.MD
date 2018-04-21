@@ -30,6 +30,8 @@ Set the below Backend Listener properties from the JMeter UI
 | **MYSQLServer** | MySql Server to which the metrics to be sent | 127.0.0.1 |
 | **MYSQLPort** | MySql Server port | 3306 | 
 | **MYSQLDatabaseName** | MySql Database name | jmeterdb | 
+| **MYSQLUsername** | MySql User name | "" | 
+| **MYSQLPassword** | MySql Password | "" | 
 | **application** | Application Name | jmeterApplication | 
 | **measurement** | Defautl table for the measurements | jmeter |
 | **summaryOnly** | Send summary details only to the DB | false |

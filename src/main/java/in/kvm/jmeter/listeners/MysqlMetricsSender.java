@@ -42,8 +42,10 @@ interface MysqlMetricsSender {
 	 *            Port
 	 * @param mysqlSchema
 	 *            Root Data prefix
+	 * @param userName TODO
+	 * @param password TODO
 	 */
-	void setup(String mysqlHost, String mysqlPort, String mysqlSchema);
+	void setup(String mysqlHost, String mysqlPort, String mysqlSchema, String userName, String password);
 
 	/**
 	 * Write metrics to MYSQL.
